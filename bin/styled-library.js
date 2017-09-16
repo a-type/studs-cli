@@ -2,7 +2,8 @@
 const minimist = require('minimist');
 const args = minimist(process.argv.slice(2));
 
-const styleguide = require('../scripts/styleguide');
+const styleguide = require('../scripts/styleguide').default;
+const build = require('../scripts/build').default;
 
 const getConfig = require('../util/config');
 const config = getConfig(args.config);
@@ -14,6 +15,10 @@ switch (args._[0]) {
     } else {
       styleguide.run({ config, args });
     }
+    break;
+  }
+  case 'build': {
+    build({ config, args });
     break;
   }
   default: {

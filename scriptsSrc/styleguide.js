@@ -6,7 +6,7 @@ const cwd = process.cwd();
 const defaultStyleguidistConfig = path.resolve(cwd, 'styleguide.config.js');
 const bin = path.resolve(__dirname, '../node_modules/.bin/styleguidist');
 
-module.exports = {
+export default {
   run({ config: { styleguidistConfig = defaultStyleguidistConfig } }) {
     console.info('Starting a Styleguidist server');
 
