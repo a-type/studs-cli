@@ -45,8 +45,12 @@
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
+    "change-case": "^3.0.1",
     "cross-spawn": "^5.1.0",
+    "handlebars": "^4.0.10",
+    "inquirer": "^3.2.3",
     "minimist": "^1.2.0",
+    "plop": "^1.8.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-styleguidist": "^6.0.24",
