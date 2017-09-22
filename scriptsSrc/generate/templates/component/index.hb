@@ -1,1 +1,2 @@
-export default from './{{pascal name}}';
+import {{pascal name}} from './{{pascal name}}';
+export default {{pascal name}};
