@@ -4,7 +4,7 @@ const config = require('../util/config');
 
 const cwd = process.cwd();
 const defaultStyleguidistConfig = path.resolve(cwd, 'styleguide.config.js');
-const bin = path.resolve(__dirname, '../node_modules/.bin/styleguidist');
+const bin = 'styleguidist';
 
 export default {
   run({ config: { styleguidistConfig = defaultStyleguidistConfig } }) {
