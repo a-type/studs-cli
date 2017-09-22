@@ -21,7 +21,7 @@ export default ({ config }) => {
     .then(answers => {
       template({
         templatePath: 'component/Component.hb',
-        destinationPath: path.posix.join(
+        destinationPath: path.resolve(
           config.componentsDirectory,
           `{{pascal name}}/{{pascal name}}.js`
         ),
@@ -31,7 +31,7 @@ export default ({ config }) => {
 
       template({
         templatePath: 'component/index.hb',
-        destinationPath: path.posix.join(
+        destinationPath: path.resolve(
           config.componentsDirectory,
           `{{pascal name}}/index.js`
         ),
@@ -41,7 +41,7 @@ export default ({ config }) => {
 
       template({
         templatePath: 'component/Component.md.hb',
-        destinationPath: path.posix.join(
+        destinationPath: path.resolve(
           config.componentsDirectory,
           `{{pascal name}}/{{pascal name}}.md`
         ),
