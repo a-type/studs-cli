@@ -13,7 +13,9 @@ function ensureDirectoryExistence(filePath) {
 
 export default ({ templatePath, destinationPath, data, config }) => {
   const processedSrcPath = handlebars.compile(templatePath)(data);
-  const processedDestPath = handlebars.compile(destinationPath)(data);
+  const processedDestPath = handlebars.compile(
+    destinationPath.replace(/\\/g, '//')
+  )(data);
   const text = fs.readFileSync(
     path.resolve(__dirname, 'templates', processedSrcPath),
     { encoding: 'utf-8' }
