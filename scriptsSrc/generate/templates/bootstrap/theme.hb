@@ -1,4 +1,4 @@
-import Theme, { createThemeProvider } from 'styled-library-themer';
+import Theme, { createThemeProvider } from 'react-studs';
 
 const theme = new Theme('{{param name}}', {
   colors: {

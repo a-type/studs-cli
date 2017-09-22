@@ -3,7 +3,7 @@ const fs = require('fs');
 const _ = require('lodash');
 const posix = path.posix;
 
-export default ({ config: { sourcesRoot } }) => {
+export default ({ config: { sourcesDirectory } }) => {
   const contents = [
     `
   /**
@@ -15,7 +15,7 @@ export default ({ config: { sourcesRoot } }) => {
   ];
   const exportItems = [];
 
-  const src = sourcesRoot || path.resolve(process.cwd(), 'src');
+  const src = sourcesDirectory || path.resolve(process.cwd(), 'src');
 
   const appendExports = (dir, subDirs, files) => {
     const relativeToSrc = posix.relative(src, dir);

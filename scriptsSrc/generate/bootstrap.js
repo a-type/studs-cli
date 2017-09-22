@@ -18,27 +18,6 @@ export default ({ config }) => {
         data: answers,
         config,
       });
-
-      template({
-        templatePath: 'bootstrap/Elements.md',
-        destinationPath: 'elements/Elements.md',
-        data: answers,
-        config,
-      });
-
-      template({
-        templatePath: 'bootstrap/Compositions.md',
-        destinationPath: 'compositions/Compositions.md',
-        data: answers,
-        config,
-      });
-
-      template({
-        templatePath: 'bootstrap/Behaviors.md',
-        destinationPath: 'behaviors/Behaviors.md',
-        data: answers,
-        config,
-      });
     })
     .catch(console.error);
 };

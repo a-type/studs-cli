@@ -1,11 +1,11 @@
 {
-  "name": "styled-library",
+  "name": "studs-cli",
   "version": "0.1.0",
   "description":
     "Tools for creating component libraries with React and styled-components",
   "main": "dist/index.js",
   "bin": {
-    "styled-library": "bin/styled-library.js"
+    "studs": "bin/studs-cli.js"
   },
   "engines": {
     "node": ">=6.0"
@@ -25,15 +25,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/a-type/styled-library.git"
+    "url": "git+https://github.com/a-type/studs-cli.git"
   },
   "keywords": ["styled-components"],
   "author": "Grant Forrest <gaforres@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/a-type/styled-library/issues"
+    "url": "https://github.com/a-type/studs-cli/issues"
   },
-  "homepage": "https://github.com/a-type/styled-library#readme",
+  "homepage": "https://github.com/a-type/studs-cli#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",

@@ -21,7 +21,7 @@ export default ({ templatePath, destinationPath, data, config }) => {
   const compiled = handlebars.compile(text)(data);
   const fullDestPath = path.resolve(
     process.cwd(),
-    config.sourcesRoot,
+    config.sourcesDirectory,
     processedDestPath
   );
   ensureDirectoryExistence(fullDestPath);

@@ -1,5 +1,6 @@
 import inquirer from 'inquirer';
 import template from './template';
+import path from 'path';
 
 export default ({ config }) => {
   inquirer
@@ -7,7 +8,7 @@ export default ({ config }) => {
       {
         type: 'input',
         name: 'name',
-        message: 'Name of the element:',
+        message: 'Name of the component:',
         validate: value => (/.+/.test(value) ? true : 'Name is required'),
       },
       {
@@ -19,22 +20,31 @@ export default ({ config }) => {
     ])
     .then(answers => {
       template({
-        templatePath: 'element/Element.hb',
-        destinationPath: 'elements/{{pascal name}}/{{pascal name}}.js',
+        templatePath: 'component/Component.hb',
+        destinationPath: path.resolve(
+          config.componentsDirectory,
+          `{{pascal name}}/{{pascal name}}.js`
+        ),
         data: answers,
         config,
       });
 
       template({
-        templatePath: 'element/index.hb',
-        destinationPath: 'elements/{{pascal name}}/index.js',
+        templatePath: 'component/index.hb',
+        destinationPath: path.resolve(
+          config.componentsDirectory,
+          `{{pascal name}}/index.js`
+        ),
         data: answers,
         config,
       });
 
       template({
-        templatePath: 'element/Element.md.hb',
-        destinationPath: 'elements/{{pascal name}}/{{pascal name}}.md',
+        templatePath: 'component/Component.md.hb',
+        destinationPath: path.resolve(
+          config.componentsDirectory,
+          `{{pascal name}}/{{pascal name}}.md`
+        ),
         data: answers,
         config,
       });

@@ -7,8 +7,8 @@ const bin = path.resolve(cwd, 'node_modules/.bin/babel');
 
 export default ({ config, args }) => {
   generateIndex({ config, args });
-  const src = config.sourcesRoot || 'src';
-  const dest = config.buildRoot || 'dist';
+  const src = config.sourcesDirectory || 'src';
+  const dest = config.buildDirectory || 'dist';
   spawn.sync(bin, ['--copy-files', '--out-dir', dest, src], {
     stdio: 'inherit',
   });
