@@ -15,11 +15,11 @@ export default ({ templatePath, destinationPath, data, config }) => {
   const processedSrcPath = handlebars.compile(templatePath)(data);
   const processedDestPath = handlebars.compile(destinationPath)(data);
   const text = fs.readFileSync(
-    path.resolve(__dirname, 'templates', processedSrcPath),
+    path.posix.resolve(__dirname, 'templates', processedSrcPath),
     { encoding: 'utf-8' }
   );
   const compiled = handlebars.compile(text)(data);
-  const fullDestPath = path.resolve(
+  const fullDestPath = path.posix.resolve(
     process.cwd(),
     config.sourcesDirectory,
     processedDestPath
