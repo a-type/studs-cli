@@ -1,6 +1,6 @@
 {
   "name": "studs-cli",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description":
     "Tools for creating component libraries with React and styled-components",
   "main": "dist/index.js",
