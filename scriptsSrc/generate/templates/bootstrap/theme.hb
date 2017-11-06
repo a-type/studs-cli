@@ -1,4 +1,7 @@
-import Theme, { createThemeProvider } from 'react-studs';
+import Theme, { withCompiledTheme } from 'react-studs';
+// this can be changed to a different kind of theme provider if
+// you want to use react-studs with another theming solution
+import { ThemeProvider } from 'styled-components';
 
 const theme = new Theme('{{param name}}', {
   colors: {
@@ -8,4 +11,4 @@ const theme = new Theme('{{param name}}', {
 });
 
 export default theme;
-export const {{pascal name}}ThemeProvider = createThemeProvider(theme);
+export const {{pascal name}}ThemeProvider = withCompiledTheme(theme)(ThemeProvider);
